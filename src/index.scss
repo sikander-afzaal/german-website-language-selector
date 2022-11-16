@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url(component-styles/common.scss);
+@import url(component-styles/header.scss);
+@import url(component-styles/banner.scss);
+@import url(component-styles/footer-banner.scss);
+@import url(component-styles/footer.scss);
+
+// sections
+@import url(component-styles/section-logos.scss);
+@import url(component-styles/section-features.scss);
+@import url(component-styles/section-focus.scss);
+@import url(component-styles/section-reviews.scss);
+@import url(component-styles/section-quote.scss);
+@import url(component-styles/section-impressum.scss);
+@import url(component-styles/section-pricing.scss);
+@import url(component-styles/section-tax.scss);
+@import url(component-styles/widget.scss);
+
+body {
+  overflow-x: hidden;
+}

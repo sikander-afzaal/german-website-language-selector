@@ -1,0 +1,95 @@
+.hexagon-clip {
+  clip-path: polygon(
+    50% 0,
+    0 25%,
+    0 75%,
+    50% 100%,
+    50% 100%,
+    100% 75%,
+    100% 25%
+  );
+}
+.info-wrapper {
+  @apply row-span-1 col-span-2 cursor-pointer w-full h-full sm:relative;
+}
+.details-div:before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 20%;
+  width: 0;
+  filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04));
+  height: 0;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 20px solid white;
+  z-index: 40;
+
+  @media screen and (max-width: 1280px) {
+    top: initial;
+    bottom: 100%;
+    border-top: transparent;
+    right: 50%;
+    transform: translateX(50%);
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid white;
+  }
+}
+.hex-border {
+  @apply relative  w-full h-full hexagon-clip row-span-1 hover:z-30 hover:shadow-2xl hover:scale-[1.22] transition-all cursor-pointer  bg-[#E1E8EF] col-span-2;
+}
+.hex-border-no-hover {
+  @apply relative  w-full h-full hexagon-clip row-span-1 shadow-2xl  bg-[#E1E8EF] col-span-2;
+}
+.hexagon {
+  @apply absolute inset-[1px] pointer-events-none hexagon-clip z-10 flex justify-center items-center;
+}
+
+.banner-section {
+  @apply flex flex-col space-y-5 lg:flex-row;
+  .banner-col {
+    @apply flex flex-1;
+  }
+  .col-1 {
+    @apply flex-col items-center text-center pt-10 lg:items-start lg:pt-40 lg:text-left;
+  }
+  .banner-col-1-content {
+    @apply px-4 lg:max-w-lg;
+    .btn-primary {
+      @apply mt-8 lg:mt-10;
+    }
+  }
+
+  .banner-title {
+    @apply pt-2 pb-3 text-4xl font-bold max-w-xs mx-auto lg:text-6xl lg:max-w-none lg:pb-6 lg:leading-tight;
+  }
+
+  .banner-description {
+    @apply text-xl leading-8;
+  }
+
+  .col-2 {
+    @apply flex flex-row flex-1 justify-center pt-10 lg:pt-0;
+  }
+
+  .banner-logo {
+    @apply w-full md:max-w-lg lg:max-w-full;
+  }
+
+  .app-logos {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    height: 50px;
+  }
+
+  @media (min-width: 1024px) {
+    .app-logos {
+      margin-top: 20px;
+      display: flex;
+      justify-content: left;
+      height: 50px;
+    }
+  }
+}

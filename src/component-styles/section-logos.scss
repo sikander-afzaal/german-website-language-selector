@@ -1,0 +1,19 @@
+.section-logos {
+    .logos {
+        // @apply flex flex-row flex-wrap lg:space-x-10 items-center justify-evenly;
+    }
+
+    .swiper-slide {}
+
+    .logo {
+        @apply mix-blend-luminosity flex items-center justify-center;
+        height: 160px;
+        /* Can be anything */
+        width: 160px;
+        /* Can be anything */
+        position: relative;
+        text-align: center;
+        margin: auto;
+    }
+
+}

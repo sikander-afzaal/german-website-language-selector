@@ -1,0 +1,83 @@
+body {
+  background: linear-gradient(180deg, #fff8ef 0%, #ffffff 100%),
+    linear-gradient(0deg, #ffffff, #ffffff);
+}
+
+.header {
+  @apply container mx-auto flex flex-row p-4 sm:pt-4 lg:pt-9 font-sans relative;
+}
+
+.logo {
+  @apply mr-3 h-auto w-11 lg:w-16;
+}
+
+.logo-title {
+  @apply font-bold sm:text-xl sm:w-11 lg:text-3xl;
+}
+
+.menu-mobile {
+  @apply top-0 bottom-0 left-0 right-16 bg-white font-sans absolute z-50 flex-col pl-12 pt-12 items-start;
+  .logo {
+    @apply w-11 h-auto;
+  }
+  .logo-title {
+    @apply text-xl;
+  }
+  .menu-close-icon {
+    @apply p-2 rounded active:bg-gray absolute right-3 top-0;
+  }
+}
+
+.main-mobile-menu {
+  @apply flex flex-col space-y-4 items-start pt-10 pb-4;
+  li {
+    @apply hover:text-orange active:text-orange;
+  }
+  li,
+  li a {
+    @apply text-base;
+  }
+}
+
+.main-menu {
+  @apply flex gap-3 flex-row flex-wrap space-x-4 items-center mr-4;
+  li {
+    @apply py-4 hover:text-orange active:text-orange;
+  }
+  li,
+  li a {
+    @apply text-base;
+  }
+
+  .menu-details {
+  }
+
+  .menu-details[open] {
+    a:hover {
+      color: black;
+    }
+    position: absolute;
+    margin: -12px 0 0 0px;
+  }
+}
+
+.btn-primary {
+  @apply bg-orange text-white rounded py-5 px-6 uppercase text-base inline-block;
+}
+
+.menu-icon {
+  @apply p-2 rounded active:bg-gray;
+}
+.dropdown::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  background-color: white;
+  left: 50%;
+  transform: translateY(-20%) rotate(135deg) translateX(-50%);
+  top: 0%;
+  z-index: -1;
+  box-shadow: 0px 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}

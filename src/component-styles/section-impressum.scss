@@ -1,0 +1,21 @@
+.section-impressum {
+    .impressum {
+        @apply flex flex-col items-center space-y-10 lg:flex-row lg:space-x-10 lg:space-y-0;
+    }
+
+    .impressum-image {
+        @apply flex;
+    }
+
+    .impressum-content {
+        @apply flex flex-col space-y-10 px-4 flex-1 self-start;
+    }
+
+    .impressum-footer {
+        @apply flex space-x-10 items-center;
+    }
+
+    .impressum-details a{
+        color: #FB5D1E;
+    }
+}

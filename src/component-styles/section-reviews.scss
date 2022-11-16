@@ -1,0 +1,17 @@
+.section-reviews {
+    .reviews {
+        // @apply flex;
+    }
+
+    .review {
+        @apply flex flex-col items-center justify-center h-auto;
+    }
+
+    .review-logo {
+        // @apply pb-6;
+    }
+
+    .review-rating {
+        @apply pb-3 font-bold leading-5 text-center;
+    }
+}

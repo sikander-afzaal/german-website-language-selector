@@ -1,0 +1,23 @@
+.section-quote {
+    @apply flex flex-col items-center space-y-5 lg:items-start lg:flex-row lg:space-y-5 lg:space-x-0 lg:py-24;
+
+    .quote-col {
+        @apply flex flex-col items-start flex-1 justify-center;
+    }
+
+    .quote-col-content {
+        @apply text-center lg:text-left lg:max-w-lg;
+    }
+
+    .quote-title {
+        @apply pt-2 text-4xl max-w-sm mx-auto lg:max-w-none lg:text-6xl font-bold leading-none pb-6;
+    }
+
+    .quote-description {
+        @apply text-sm max-w-sm lg:max-w-none lg:text-xl leading-none leading-8;
+    }
+
+    .btn-primary {
+        @apply mt-8 mb-16 lg:mt-16 lg:mb-0;
+    }
+}

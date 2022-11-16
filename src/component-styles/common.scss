@@ -1,0 +1,70 @@
+html {
+    @apply scroll-smooth
+}
+
+.logo-container {
+    @apply flex flex-row items-center;
+    .logo {
+        @apply mr-3 h-auto w-11;
+    }
+    .logo-title {
+        @apply font-bold text-xl text-white;
+    }
+}
+
+.heading-container {
+    @apply text-center pb-8 lg:pb-10;
+}
+ 
+.heading-title {
+    @apply text-orange text-sm font-semibold lg:text-xl uppercase;
+}
+
+.heading-section-title {
+    @apply text-4xl lg:text-6xl font-bold capitalize pt-4 lg:pt-6;
+}
+
+.sections {
+    @apply py-10 px-4;
+}
+
+
+.client-feedback {
+    @apply relative;
+
+    .client-image-outer-wrapper {
+        @apply inline-block relative
+    }
+    .client-image-container {
+        @apply relative mx-auto z-10 rounded-full text-center;
+    }
+    .client-quote-icon {
+        @apply absolute right-0 top-8 z-10;
+        /* 30 90 */
+    }
+    .client-dot {
+        @apply absolute right-10 bottom-24;
+    }
+    .client-image-wrapper {
+        @apply rounded-full overflow-hidden flex justify-center items-center mx-auto max-w-lg h-auto relative;
+    }
+    .client-image {
+        @apply w-full h-full;
+    }
+    .client-content {
+        @apply text-center bg-white shadow-xl py-7 px-8 -mt-14 relative z-20;
+    }
+    .client-message {
+        @apply font-normal text-xl;
+    }
+    .client-details {
+        @apply pt-3;
+    }
+    .client-name {
+        @apply text-orange font-bold text-2xl uppercase;
+    }
+
+    .client-position {
+        @apply text-sm;
+    }
+}
