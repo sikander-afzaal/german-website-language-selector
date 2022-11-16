@@ -27,7 +27,7 @@ const FolderDetails = ({ img, desc1, desc2, name, setOpenDetails }) => {
         onClick={() => {
           setOpenDetails(Array(6).fill(false));
         }}
-        className="absolute cursor-pointer top-5 right-2"
+        className="absolute cursor-pointer top-[6px] right-[6px]"
       />
       <img src={img} alt="" />
       <h2 className="text-orange text-[30px] font-bold capitalize">{name}</h2>
