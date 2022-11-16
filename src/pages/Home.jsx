@@ -8,6 +8,7 @@ import Reviews from "../components/Reviews";
 import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router";
 
+//the details component that opens when you click the icons in second section
 const FolderDetails = ({ img, desc1, desc2, name, setOpenDetails }) => {
   const handleClickOutside = () => {
     setOpenDetails(Array(6).fill(false));
@@ -42,15 +43,15 @@ function Home({ content: { section1 } }) {
     false,
   ]);
   const location = useLocation();
-  // useEffect(() => {
-  //   if (window.location.href === "http://localhost:3000/#funktionen") {
-  //     handleClick();
-  //   } else if (window.location.href === "https://aktenplatz.de/#funktionen") {
-  //     handleClick();
-  //   } else {
-  //     window.scrollTo(0, 0);
-  //   }
-  // }, [location]);
+  useEffect(() => {
+    if (window.location.href === "http://localhost:3000/#funktionen") {
+      handleClick();
+    } else if (window.location.href === "https://aktenplatz.de/#funktionen") {
+      handleClick();
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [location]);
 
   const ref = useRef(null);
   const openDetailsFunc = (index) => {
