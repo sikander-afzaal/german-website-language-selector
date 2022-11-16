@@ -19,8 +19,16 @@ const FolderDetails = ({ img, desc1, desc2, name, setOpenDetails }) => {
   return (
     <div
       ref={ref}
-      className="details-div xl:top-0 z-40 flex justify-center w-[95%] sm:w-full min-w-[350px] items-start flex-col rounded p-5 absolute right-1/2 sm:translate-x-0 translate-x-1/2 xl:left-[100%] top-[102%] bg-white shadow-lg"
+      className="details-div cursor-auto xl:top-0 z-40 flex justify-center w-[95%] sm:w-full min-w-[350px] items-start flex-col rounded p-5 absolute right-1/2 sm:translate-x-0 translate-x-1/2 xl:left-[100%] top-[102%] bg-white shadow-lg"
     >
+      <img
+        src="/img/close.svg"
+        alt=""
+        onClick={() => {
+          setOpenDetails(Array(6).fill(false));
+        }}
+        className="absolute cursor-pointer top-5 right-2"
+      />
       <img src={img} alt="" />
       <h2 className="text-orange text-[30px] font-bold capitalize">{name}</h2>
       <p className="text-[#696969] text-sm font-normal mt-3">{desc1}</p>
@@ -134,6 +142,7 @@ function Home({ content: { section1 } }) {
             </div>
           </div>
         </section>
+        {/* hexagon section ------------------ */}
         <div className="container relative lg:mt-0 mt-[120px] mb-0 sm:mb-[40px] mx-auto  px-5 product-module w-full flex justify-center items-center flex-col">
           <div className="heading-container">
             <h4 className="heading-title" id="Vorteile">
